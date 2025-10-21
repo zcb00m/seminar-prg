@@ -10,7 +10,7 @@ class Kostka:
     def hod(self):
         return random.randint(1,self.__pocet_sten)
         
-    def __str__(self:)
+    def __str__(self):
         return f'Toto je kostka s {self.__pocet-sten} stenami.'
 
     def getPocet_sten(self):

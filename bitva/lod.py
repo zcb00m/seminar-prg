@@ -21,9 +21,9 @@ class Lod:
     def __str__(self):
         return str(self._jmeno)
 
-    def utok(self, souper):
+    def utoc(self, souper):
         uder = self._utok + self._kostka.hod()
-        zprava = f'{self._jmeno} pali kanonyza {uder} hp.'
+        zprava = f'{self._jmeno} pali kanony za {uder} hp.'
         self.nastav_zpravu(zprava)
         souper.bran_se(uder)
 
@@ -34,11 +34,10 @@ class Lod:
             self._trup -= poskozeni
             if self._trup < 0:
                 self._trup = 0
-                zprava = f'{zprava[:-1]} a nyla znicena.'
+                zprava = f'{zprava[:-1]} a byla znicena.'
 
     def nastav_zpravu(self, zprava):
         self._zprava = zprava
 
     def vypis_zpravu(self):
         return self._zprava
-        
